@@ -183,10 +183,10 @@ class ReactExoplayerView extends FrameLayout implements
             }
         }
     };
-    
+
     public double getPositionInFirstPeriodMsForCurrentWindow(long currentPosition) {
         Timeline.Window window = new Timeline.Window();
-        if(!player.getCurrentTimeline().isEmpty()) {    
+        if(!player.getCurrentTimeline().isEmpty()) {
             player.getCurrentTimeline().getWindow(player.getCurrentWindowIndex(), window);
         }
         return window.windowStartTimeMs + currentPosition;
@@ -311,6 +311,7 @@ class ReactExoplayerView extends FrameLayout implements
     private void initializePlayerControl() {
         if (playerControlView == null) {
             playerControlView = new PlayerControlView(getContext());
+            playerControlView.setShowTimeoutMs(0);
         }
 
         // Setting the player for the playerControlView
