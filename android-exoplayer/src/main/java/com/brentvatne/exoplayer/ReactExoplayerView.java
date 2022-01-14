@@ -316,6 +316,7 @@ class ReactExoplayerView extends FrameLayout implements
 
         // Setting the player for the playerControlView
         playerControlView.setPlayer(player);
+        reLayout(playerControlView);
         playerControlView.show();
         playPauseControlContainer = playerControlView.findViewById(R.id.exo_play_pause_container);
 
@@ -760,6 +761,7 @@ class ReactExoplayerView extends FrameLayout implements
                 videoLoaded();
                 // Setting the visibility for the playerControlView
                 if (playerControlView != null) {
+                    reLayout(playerControlView);
                     playerControlView.show();
                 }
                 setKeepScreenOn(preventsDisplaySleepDuringVideoPlayback);
