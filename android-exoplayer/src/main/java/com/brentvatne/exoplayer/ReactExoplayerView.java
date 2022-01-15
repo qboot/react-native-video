@@ -321,12 +321,12 @@ class ReactExoplayerView extends FrameLayout implements
         playPauseControlContainer = playerControlView.findViewById(R.id.exo_play_pause_container);
 
         // Invoking onClick event for exoplayerView
-        exoPlayerView.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                togglePlayerControlVisibility();
-            }
-        });
+        // exoPlayerView.setOnClickListener(new OnClickListener() {
+        //     @Override
+        //     public void onClick(View v) {
+        //         togglePlayerControlVisibility();
+        //     }
+        // });
 
         //Handling the playButton click event
         ImageButton playButton = playerControlView.findViewById(R.id.exo_play);
